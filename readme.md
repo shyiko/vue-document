@@ -1,4 +1,4 @@
-# vue-document [![npm](https://img.shields.io/npm/v/vue-document.svg)]()
+# vue-document [![npm](https://img.shields.io/npm/v/vue-document.svg)](https://www.npmjs.com/package/vue-document)
 
 A document manager for Vue.js. 
 Think [react-helmet](https://github.com/nfl/react-helmet) but for Vue.js.  
