@@ -1,0 +1,49 @@
+{
+  "name": "vue-document",
+  "description": "A 1kb document manager for Vue.js",
+  "version": "0.1.0",
+  "author": "Stanley Shyiko <stanley.shyiko@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shyiko/vue-document"
+  },
+  "module": "src/index.js",
+  "main": "umd/vue-document.bundle.js",
+  "unpkg": "umd/vue-document.bundle.min.js",
+  "config": {
+    "rollup": "rollup src/vue-document.js --format umd --name VueDocument --output umd/vue-document.js",
+    "rollup_title": "rollup src/vue-document-injector-title.js --format umd --name VueDocument.titleInjector --output umd/vue-document-injector-title.js",
+    "rollup_meta": "rollup src/vue-document-injector-meta.js --format umd --name VueDocument.metaInjector --output umd/vue-document-injector-meta.js",
+    "rollup_bundle": "rollup src/vue-document.bundle.js --format umd --name VueDocument --output umd/vue-document.bundle.js",
+    "minify": "babili umd/vue-document.js -o umd/vue-document.min.js",
+    "minify_title": "babili umd/vue-document-injector-title.js -o umd/vue-document-injector-title.min.js",
+    "minify_meta": "babili umd/vue-document-injector-meta.js -o umd/vue-document-injector-meta.min.js",
+    "minify_bundle": "babili umd/vue-document.bundle.js -o umd/vue-document.bundle.min.js"
+  },
+  "scripts": {
+    "lint": "standard src/*.js test/*.js",
+    "lint-fix": "standard --fix src/*.js test/*.js",
+    "test": "$npm_package_config_rollup && $npm_package_config_rollup_title && $npm_package_config_rollup_meta && $npm_package_config_rollup_bundle && tap test/*.test.js",
+    "build": "rimraf umd/ && $npm_package_config_rollup && $npm_package_config_rollup_title && $npm_package_config_rollup_meta && $npm_package_config_rollup_bundle && $npm_package_config_minify && $npm_package_config_minify_title && $npm_package_config_minify_meta && $npm_package_config_minify_bundle"
+  },
+  "devDependencies": {
+    "babili": "^0.0.12",
+    "domino": "^1.0.28",
+    "pre-commit": "^1.2.2",
+    "rimraf": "^2.6.1",
+    "rollup": "^0.41.6",
+    "standard": "^10.0.1",
+    "tap": "^10.3.2",
+    "vue": "^2.2.6",
+    "vue-server-renderer": "^2.2.6"
+  },
+  "pre-commit": "lint",
+  "keywords": [
+    "vue",
+    "document",
+    "head",
+    "meta",
+    "helmet"
+  ]
+}
