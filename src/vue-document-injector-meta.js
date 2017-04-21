@@ -25,8 +25,8 @@ export default function (document) {
   var meta = metadata.head && metadata.head.meta
   if (meta != null && Array.isArray(meta)) {
     meta.forEach(function (m) {
-      var key = metaKeys.find(function (key) { return m[key] })
-      if (key) {
+      var key
+      if (metaKeys.some(function (k) { key = k; return m[k] })) {
         var el = document.querySelector('meta[' + key + '="' + m[key] + '"]')
         var append = !el
         if (append) { el = document.createElement('meta') }
