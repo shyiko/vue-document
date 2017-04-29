@@ -82,7 +82,7 @@ In the example above, instead of writing `injector` ourselves we could use [vue-
 #### Server-Side
 
 > The example below is not using [bundleRenderer](https://www.npmjs.com/package/vue-server-renderer) just to keep things simple.  
-There is [nothing stopping you from doing that]((https://github.com/shyiko/neutrino-preset-vue-static)).  
+There is [nothing stopping you from doing that](https://github.com/shyiko/neutrino-preset-vue-static).  
 
 ```javascript
 const Vue = require('vue')
