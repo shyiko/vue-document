@@ -1,4 +1,5 @@
 .idea
 .tmp
 *.tgz
+node_modules/
 umd
