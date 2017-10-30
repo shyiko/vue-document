@@ -106,6 +106,13 @@ export default function VueDocument (Vue, o) {
         this.$root[cache] = undefined
         injector.call(this, window.document)
       }
+    },
+    // not called on server-side
+    destroyed: function () {
+      if (this[prop]) {
+        this.$root[cache] = undefined
+        injector.call(this, window.document)
+      }
     }
   })
 }
