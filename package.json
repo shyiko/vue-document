@@ -1,7 +1,7 @@
 {
   "name": "vue-document",
   "description": "A 1kb document manager for Vue.js",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "author": "Stanley Shyiko <stanley.shyiko@gmail.com>",
   "license": "MIT",
   "repository": {
